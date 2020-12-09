@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -14,6 +14,7 @@
 </head>
 
 <body>
+    <br>
     <header class="header">
         <h1 class="header-logo">
             Ambiente Virtual de Aprendizagem
@@ -28,74 +29,28 @@
     </header>
 
     <div class="page-heading">
-        Aluno matriculado no 4° período <br /> Engenharia de Software
+        Aluno matriculado no 4º Periodo <br /> Engenharia de Software
     </div>
 
     <div class="card-sections">
         <div class="card-heading">Disciplinas Ativas</div>
         <div class="card-list">
+            {% for disciplinas in exibir_disciplina %}
             <div class="card-item">
-                <div class="card-title">Programação de Hipermidia</div>
-                <div class="card-period">4° Periodo</div>
+                <div class="card-title">{{disciplinas.get_nome_disciplina()}}</div>
+                <div class="card-period">{{disciplinas.get_periodo_disciplina()}}</div>
                 <a href="#" class="card-button">Acessar</a>
             </div>
-            <div class="card-item">
-                <div class="card-title">Programação de Hipermidia</div>
-                <div class="card-period">4° Periodo</div>
-                <a href="#" class="card-button">Acessar</a>
-            </div>
-            <div class="card-item">
-                <div class="card-title">Programação de Hipermidia</div>
-                <div class="card-period">4° Periodo</div>
-                <a href="#" class="card-button">Acessar</a>
-            </div>
-            <div class="card-item">
-                <div class="card-title">Programação de Hipermidia</div>
-                <div class="card-period">4° Periodo</div>
-                <a href="#" class="card-button">Acessar</a>
-            </div>
-            <div class="card-item">
-                <div class="card-title">Programação de Hipermidia</div>
-                <div class="card-period">4° Periodo</div>
-                <a href="#" class="card-button">Acessar</a>
-            </div>
-            <div class="card-item">
-                <div class="card-title">Programação de Hipermidia</div>
-                <div class="card-period">4° Periodo</div>
-                <a href="#" class="card-button">Acessar</a>
-            </div>
-            <div class="card-item">
-                <div class="card-title">Programação de Hipermidia</div>
-                <div class="card-period">4° Periodo</div>
-                <a href="#" class="card-button">Acessar</a>
-            </div>
-            <div class="card-item">
-                <div class="card-title">Programação de Hipermidia</div>
-                <div class="card-period">4° Periodo</div>
-                <a href="#" class="card-button">Acessar</a>
-            </div>
-            <div class="card-item">
-                <div class="card-title">Programação de Hipermidia</div>
-                <div class="card-period">4° Periodo</div>
-                <a href="#" class="card-button">Acessar</a>
-            </div>
-            <div class="card-item">
-                <div class="card-title">Programação de Hipermidia</div>
-                <div class="card-period">4° Periodo</div>
-                <a href="#" class="card-button">Acessar</a>
-            </div>
-            <div class="card-item">
-                <div class="card-title">Programação de Hipermidia</div>
-                <div class="card-period">4° Periodo</div>
-                <a href="#" class="card-button">Acessar</a>
-            </div>
-            <div class="card-item">
-                <div class="card-title">Programação de Hipermidia</div>
-                <div class="card-period">4° Periodo</div>
-                <a href="#" class="card-button">Acessar</a>
-            </div>
+            {% endfor %}
         </div>
     </div>
+
+
+    <footer>
+
+        <h1 style="text-align: center; padding-top: 50px; padding-bottom: 50px;">Univ de Vass</h1>
+
+    </footer>
 </body>
 
 </html>

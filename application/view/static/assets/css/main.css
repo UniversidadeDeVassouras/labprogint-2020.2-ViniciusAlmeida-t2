@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #3E3E3E;
+    --secondary: #7B0404;
+    --color-logo: #D70000;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    background-color: #2F2F2F;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.container {
+    max-width: calc(1200px - 24px);
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.header {
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 32px;
+}
+
+.header .header-logo {
+    font-size: 24px;
+    line-height: 1;
+    margin: 0;
+    color: var(--color-logo);
+    font-weight: 400;
+}
+
+.header .header-message {
+    font-size: 24px;
+    display: none;
+}
+
+.header .header-actions {
+    flex-shrink: 0;
+}
+
+.header .header-actions .action-item {
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.header .header-actions .action-item+.action-item {
+    margin-left: 24px
+}
+
+.page-heading {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 64px;
+}
+
+.card-item {
+    border-radius: 2%;
+}
+
+.card-sections .card-heading {
+    font-size: 38px;
+    padding: 0 32px;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    margin-top: 64px;
+}
+
+.card-sections .card-list {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+    padding: 0 32px;
+}
+
+.card-sections .card-list .card-item {
+    background-color: var(--primary);
+    padding: 24px;
+    width: 100%;
+    text-align: center;
+}
+
+.card-sections .card-list .card-item .card-title {
+    font-size: 24px;
+}
+
+.card-sections .card-list .card-item .card-period {
+    font-size: 20px;
+    margin: 24px 0;
+}
+
+.card-sections .card-list .card-item .card-button {
+    background-color: var(--secondary);
+    text-decoration: none;
+    color: white;
+    padding: 12px 24px;
+    display: inline-block;
+    font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .card-sections .card-list .card-item {
+        width: calc((100% / 3) - 16px);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .header .header-message {
+        display: block;
+    }
+    .card-sections .card-list .card-item {
+        width: calc((100% / 4) - 16px);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .card-sections .card-list .card-item {
+        width: calc((100% / 6) - 16px);
+    }
+}

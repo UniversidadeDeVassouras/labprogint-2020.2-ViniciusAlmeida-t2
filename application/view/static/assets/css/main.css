@@ -6,6 +6,7 @@
     --primary: #3E3E3E;
     --secondary: #7B0404;
     --color-logo: #D70000;
+    --color-button: #4a0101;
 }
 
 body {
@@ -111,9 +112,58 @@ body {
     font-size: 20px;
 }
 
+.card-sections .card-list .card-item .card-button:hover {
+    background-color: var(--color-button);
+}
+
+.card-item-initial {
+    border-radius: 2%;
+}
+
+.card-sections-initial .card-heading-initial {
+    font-size: 38px;
+    padding: 0 32px;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    margin-top: 64px;
+}
+
+.card-sections-initial {
+    max-width: 800px;
+    margin: auto;
+}
+
+.card-sections-initial .card-list-initial {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 24px;
+    padding: 0 32px;
+}
+
+.card-sections-initial .card-list-initial .card-item-initial {
+    background-color: var(--primary);
+    padding: 24px;
+    width: 100%;
+    text-align: center;
+}
+
+.card-sections-initial .card-list-initial .card-item-initial .card-title-task {
+    font-size: 24px;
+}
+
+.card-sections-initial .card-list-initial .card-item-initial .card-quantitity {
+    font-size: 55px;
+    margin: 24px 0;
+    color: var(--color-logo);
+}
+
 @media screen and (min-width: 768px) {
     .card-sections .card-list .card-item {
         width: calc((100% / 2) - 16px);
+    }
+    .card-sections-initial .card-list-initial .card-item-initial {
+        width: calc((100% / 3) - 16px);
     }
 }
 
@@ -128,7 +178,10 @@ body {
         display: block;
     }
     .card-sections .card-list .card-item {
-        width: calc((100% / 4) - 16px);
+        width: calc((100% / 3) - 16px);
+    }
+    .card-sections-initial .card-list-initial .card-item-initial {
+        width: calc((100% / 3) - 16px);
     }
     .header {
         margin: auto;
@@ -138,7 +191,10 @@ body {
 
 @media screen and (min-width: 1440px) {
     .card-sections .card-list .card-item {
-        width: calc((100% / 4) - 16px);
+        width: calc((100% / 6) - 16px);
+    }
+    .card-sections-initial .card-list-initial .card-item-initial {
+        width: calc((100% / 3) - 16px);
     }
     .header {
         margin: auto;

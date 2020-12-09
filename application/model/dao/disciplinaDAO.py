@@ -9,7 +9,7 @@ from application.model.entity.Prova import Prova
 class disciplinaDAO:
     def __init__(self):
        self._lista_disciplina = []
-       self._lista_disciplina.append(Disciplina(1, "Laboratorio de Interface do Usuario", "4º Periodo"))
+       self._lista_disciplina.append(Disciplina(1, "Laboratorio de Interface com o Usuario", "4º Periodo"))
        self._lista_disciplina.append(Disciplina(2, "Sistemas Operacionais", "4º Periodo"))
        self._lista_disciplina.append(Disciplina(3, "Modelagem de Banco de Dados", "4º Periodo"))
        self._lista_disciplina.append(Disciplina(4, "Gestão Ambiental e Desenvolvimento Sustentável", "4º Periodo"))

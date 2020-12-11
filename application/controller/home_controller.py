@@ -9,9 +9,3 @@ def home():
     disciplinas = current_app.config ['disciplinas']
     exibir_disciplina = disciplinas.get_lista_disciplina()
     return render_template('index.html', exibir_disciplina = exibir_disciplina)
-
-
-@app.route("/materia")
-def materia():
-
-    return render_template('materias.html')

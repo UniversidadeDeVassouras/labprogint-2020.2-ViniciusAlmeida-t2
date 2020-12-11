@@ -13,19 +13,7 @@
 </head>
 
 <body>
-    <br>
-    <header class="header">
-        <h1 class="header-logo">
-            Ambiente Virtual de Aprendizagem
-        </h1>
-        <div class="header-message">
-            Seja bem vindo, Usuário
-        </div>
-        <div class="header-actions">
-            <a href="#" class="action-item"><i class="fa fa-user"></i></a>
-            <a href="#" class="action-item"><i class="fa fa-cog"></i></a>
-        </div>
-    </header>
+    <br> {%include 'header.html'%}
 
     <div class="page-heading">
         Aluno matriculado no 4º Periodo <br /> Engenharia de Software
@@ -38,7 +26,7 @@
             <div class="card-item">
                 <div class="card-title">{{disciplinas.get_nome_disciplina()}}</div>
                 <div class="card-period">{{disciplinas.get_periodo_disciplina()}}</div>
-                <a href="#" class="card-button">Acessar</a>
+                <a href="/materia/{{disciplinas.get_id()}}" class="card-button">Acessar</a>
             </div>
             {% endfor %}
         </div>

@@ -17,7 +17,7 @@
     <br> {%include 'header.html'%}
 
     <div class="page-heading">
-        <p>Matéria selecionada:</p>
+        <p>Matéria selecionada: {{disciplinas.get_nome_disciplina()}}</p>
     </div>
     <div class="card-sections-initial">
         <div class="card-list-initial">
@@ -31,7 +31,7 @@
             </div>
             <div class="card-item-initial">
                 <div class="card-title-task">Trabalhos</div>
-                <div class="card-quantitity">8</div>
+                <div class="card-quantitity">{%if trabalhos%}{{qtd_trabalho}}{%endif%}</div>
             </div>
         </div>
     </div>
@@ -58,9 +58,17 @@
                 <div class="card-period">{{i.get_professor_prova()}}</div>
                 <a href="#" class="card-button">Acessar</a>
             </div>
+            {%endfor%} {%endif%} {%if trabalhos%} {%for i in trabalhos.get_trabalho_disciplina_id()%}
+            <div class="card-item">
+                <div class="card-title">{{i.get_materia_trabalho()}}</div>
+                <div class="card-period">{{i.get_professor_trabalho()}}</div>
+                <a href="#" class="card-button">Acessar</a>
+            </div>
             {%endfor%} {%endif%}
         </div>
     </div>
+
+    {%include 'footer.html'%}
 </body>
 
 </html>

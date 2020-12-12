@@ -16,3 +16,12 @@ class disciplinaDAO:
     def get_lista_disciplina (self):
         return self._lista_disciplina
     
+
+
+    def buscar_disciplina (self, id):
+        disciplina = None
+        for index, disciplinas in enumerate(self.get_lista_disciplina()):
+            if disciplinas.get_id() == id:
+                disciplina = disciplinas
+                return disciplina
+        return disciplina

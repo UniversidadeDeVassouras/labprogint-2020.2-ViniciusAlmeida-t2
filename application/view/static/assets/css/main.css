@@ -158,18 +158,29 @@ body {
     color: var(--color-logo);
 }
 
+.footer {
+    text-align: center;
+    padding: 40px;
+    background-color: var(--primary);
+    margin-top: 50px;
+}
+
+.footer .img-footer .img-footer-selected {
+    width: 300px;
+    height: 130px;
+}
+
+.footer .copyright-footer .copyright-footer-text {
+    font-size: 11px;
+    color: #fff;
+}
+
 @media screen and (min-width: 768px) {
     .card-sections .card-list .card-item {
         width: calc((100% / 2) - 16px);
     }
     .card-sections-initial .card-list-initial .card-item-initial {
         width: calc((100% / 3) - 16px);
-    }
-}
-
-@media screen and (min-width: 448px) {
-    .card-sections .card-heading {
-        text-align: center;
     }
 }
 

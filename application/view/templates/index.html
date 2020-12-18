@@ -15,11 +15,11 @@
 <body>
     <br> {%include 'header.html'%}
 
-    <div class="page-heading">
+    <section class="page-heading">
         Aluno matriculado no 4º Periodo <br /> Engenharia de Software
-    </div>
+    </section>
 
-    <div class="card-sections">
+    <section class="card-sections">
         <div class="card-heading">Disciplinas Ativas</div>
         <div class="card-list">
             {% for disciplinas in exibir_disciplina %}
@@ -30,7 +30,7 @@
             </div>
             {% endfor %}
         </div>
-    </div>
+    </section>
 
 
     {%include 'footer.html'%}
